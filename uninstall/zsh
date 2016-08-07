@@ -1,0 +1,5 @@
+rm -rf ~/.oh-my-zsh
+rm ~/.zshrc
+rm ~/.zsh_history
+rm ~/.zsh-update
+

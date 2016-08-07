@@ -1,0 +1,7 @@
+sh install/emacs
+sh install/vim
+sh install/zsh
+sh install/psql
+sh install/htop
+sh install/xmonad
+sh install/ag

@@ -1,0 +1,2 @@
+brew install the_silver_searcher
+ln -s -f -v $(pwd)/agignore ~/.agignore
