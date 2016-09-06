@@ -5,3 +5,4 @@ COMPLETION_WAITING_DOTS="true"
 
 Plugins=(git command-not-found)
 source ~/.oh-my-zsh/oh-my-zsh.sh
+source ~/.nix-profile/etc/profile.d/nix.sh
