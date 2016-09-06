@@ -55,9 +55,6 @@ set formatprg="PARINIT='rTbgqR B=.,?_A_a Q=_s>|' par\ -w72"
 " Use stylish haskell instead of par for haskell buffers
 autocmd FileType haskell let &formatprg="stylish-haskell"
 
-" Find custom built ghc-mod, codex etc
-" let $PATH = $PATH . ':' . expand("~/dotfiles/haskell/bin")
-
 " Kill the damned Ex mode.
 nnoremap Q <nop>
 
@@ -75,34 +72,34 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Support bundles
-Plugin 'jgdavey/tslime.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'ervandew/supertab'
-Plugin 'moll/vim-bbye'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vim-scripts/gitignore'
+" Plugin 'jgdavey/tslime.vim'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'ervandew/supertab'
+" Plugin 'moll/vim-bbye'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'vim-scripts/gitignore'
 
 " Colours
 Plugin 'flazz/vim-colorschemes'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'int3/vim-extradite'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'int3/vim-extradite'
 
 " Bars, panels, and files
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
-Plugin 'mtth/scratch.vim'
+" Plugin 'bling/vim-airline'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'mtth/scratch.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Text manipulation
-Plugin 'vim-scripts/Align'
-Plugin 'vim-scripts/Gundo'
-Plugin 'tpope/vim-commentary'
-Plugin 'godlygeek/tabular'
-Plugin 'michaeljsmith/vim-indent-object'
+" Plugin 'vim-scripts/Align'
+" Plugin 'vim-scripts/Gundo'
+" Plugin 'tpope/vim-commentary'
+" Plugin 'godlygeek/tabular'
+"Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'scrooloose/nerdcommenter'
 
 " Allow pane movement to jump out of vim into tmux
@@ -115,13 +112,8 @@ Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Twinside/vim-hoogle'
 
-" Idris
-Plugin 'idris-hackers/idris-vim'
-
-" Python
+Plugin 'idris-hackers/idris-vim' 
 Plugin 'klen/python-mode'
-
-" Tex
 Plugin 'lervag/vimtex'
 
 call vundle#end()
@@ -198,6 +190,7 @@ set mouse=a
 " }}}
 
 " Colors and Fonts {{{
+set  t_Co=256
 colorscheme molokai
 
 " Enable syntax highlighting
@@ -410,7 +403,7 @@ augroup END
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
-" }}}
+"}}}
 
 " Helper functions {{{
 
@@ -669,12 +662,6 @@ let g:pymode_rope = 0
 
 " }}}
 
-" {{{ Ocaml Integration
-
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-
-" }}}
 
 " Conversion {{{
 
