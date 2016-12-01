@@ -20,7 +20,6 @@ import XMonad.Layout.TwoPane  -- consider using DragPane instead
 import XMonad.Util.EZConfig
 import XMonad.Util.Run (safeSpawn)
 
-import qualified XMonad.Actions.GridSelect as GS
 import qualified XMonad.Actions.OnScreen as OS
 import qualified XMonad.Actions.Plane as P
 import qualified XMonad.Actions.Volume as Vol
@@ -100,36 +99,16 @@ myKeys =
        , ("M-C-<Up>", shiftScreensDownBy (-1))
        , ("M-C-<Down>", shiftScreensDownBy 1)
 
-       -- pre-sets
-       , ("M-C-1", setWorkspaces ["1", "2"])
-       , ("M-C-2", setWorkspaces ["3", "4"])
-       , ("M-C-3", setWorkspaces ["5", "6"])
-       , ("M-C-4", setWorkspaces ["7", "8"])
-       , ("M-C-5", setWorkspaces ["9", "10"])
-
-       -- grid select
-       , ("M-g w", GS.goToSelected GS.defaultGSConfig)  -- select window
-       , ("M-g l", GS.spawnSelected GS.defaultGSConfig  -- select application to launch
-             [ "google-chrome"
-             , "gnome-terminal"
-             , "emacs -nw"
-             , "sublime-text --new-window"
-             , "hipchat"
-             , "nautilus --no-desktop"
-             ])
-
        -- applications
-       , ("M-f c", spawn "google-chrome")
-       , ("M-f z", spawn "firefox -P kevin@mixrank.com --no-remote")
-       , ("M-f t", spawn "gnome-terminal")
+       , ("M-f c", spawn "google-chrome-stable")
        , ("M-f e", spawn "emacs -nw")
        , ("M-f s", spawn "sublime-text --new-window")
-       , ("M-f h", spawn "hipchat")
+       , ("M-f h", spawn "slack")
 
        -- commands
        , ("M-<F10>", Vol.setMute False >> Vol.lowerVolume 4 >> return ())
        , ("M-<F11>", Vol.setMute False >> Vol.raiseVolume 4 >> return ())
-       , ("M-l", spawn "gnome-screensaver-command -l")  -- lock screen
+       , ("M-<F12>", spawn "gnome-screensaver-command -l")  -- lock screen
        , ("M-s", sendMessage MD.ToggleStruts) -- toggle xmobar visibility
        ]
        where
