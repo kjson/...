@@ -97,24 +97,24 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 " Text manipulation
 " Plugin 'vim-scripts/Align'
 " Plugin 'vim-scripts/Gundo'
-" Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'
 " Plugin 'godlygeek/tabular'
 "Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'scrooloose/nerdcommenter'
 
 " Allow pane movement to jump out of vim into tmux
-Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'christoomey/vim-tmux-navigator'
 
 " Haskell
-Plugin 'raichoo/haskell-vim'
-Plugin 'enomsg/vim-haskellConcealPlus'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
-Plugin 'Twinside/vim-hoogle'
+" Plugin 'raichoo/haskell-vim'
+" Plugin 'enomsg/vim-haskellConcealPlus'
+" Plugin 'eagletmt/ghcmod-vim'
+" Plugin 'eagletmt/neco-ghc'
+" Plugin 'Twinside/vim-hoogle'
 
-Plugin 'idris-hackers/idris-vim' 
+" Plugin 'idris-hackers/idris-vim' 
 Plugin 'klen/python-mode'
-Plugin 'lervag/vimtex'
+" Plugin 'lervag/vimtex'
 
 call vundle#end()
 
