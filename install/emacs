@@ -1,6 +1,0 @@
-brew install cask
-export PATH="/path/to/code/cask/bin:$PATH"
-cask install
-rm -rf ~/.emacs.d
-ln -f -s -v $(pwd)/emacsd ~/.emacs.d
-
