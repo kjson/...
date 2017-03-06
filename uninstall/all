@@ -1,7 +1,0 @@
-sh uninstall/vim
-sh uninstall/zsh
-sh uninstall/emacs
-sh uninstall/psql
-sh uninstall/htop
-sh uninstall/xmonad
-sh uninstall/ag

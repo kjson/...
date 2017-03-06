@@ -1,2 +1,0 @@
-rm -rf ~/.emacs.d
-brew remove cask
