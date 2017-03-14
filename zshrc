@@ -6,3 +6,4 @@ COMPLETION_WAITING_DOTS="true"
 Plugins=(git command-not-found)
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/.nix-profile/etc/profile.d/nix.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
