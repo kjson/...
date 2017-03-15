@@ -233,6 +233,7 @@ let g:tmuxline_preset = {
 
 " Not sure why this isn't working
 " let g:airline_theme='distinquished'
+let g:airline_theme='distinguished'
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
