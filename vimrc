@@ -55,6 +55,9 @@ set formatprg="PARINIT='rTbgqR B=.,?_A_a Q=_s>|' par\ -w72"
 " Kill the damned Ex mode.
 nnoremap Q <nop>
 
+" Stop highlighting
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
 " }}}
 
 " Vundle {{{
