@@ -10,7 +10,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
     ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[brown]%} renamed"
     ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} unmerged"
     ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} untracked"
-    PROMPT='%{$fg[blue]%}[%{$fg[white]%}%D{%F:%T} %{$fg[white]%}%n%{$reset_color%}@%{$fg[white]%}%m%{$reset_color%}:%{$fg[white]%}%~%{$reset_color%}%{$fg[blue]%}]$(git_prompt_info)$(git_prompt_status) %{$reset_color%}
+    PROMPT='%{$fg[blue]%}[%{$fg[white]%}%D{%F %T} %{$fg[white]%}%n%{$reset_color%}@%{$fg[white]%}%m%{$reset_color%}:%{$fg[white]%}%~%{$reset_color%}%{$fg[blue]%}]$(git_prompt_info)$(git_prompt_status) %{$reset_color%}
 ${return_code}→ '
     RPROMPT='${return_code}$(git_prompt_status)%{$reset_color%}'
     RPROMPT=''
