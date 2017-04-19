@@ -9,3 +9,5 @@ source ~/.nix-profile/etc/profile.d/nix.sh
 
 # make tmux use 256 colors
 alias tmux='TERM=xterm-256color tmux'
+source /Users/kevinjohnson/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
