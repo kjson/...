@@ -11,3 +11,4 @@ source ~/.nix-profile/etc/profile.d/nix.sh
 alias tmux='TERM=xterm-256color tmux'
 source /Users/kevinjohnson/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.cargo/env
