@@ -74,6 +74,7 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'moll/vim-bbye'
 " Plugin 'nathanaelkane/vim-indent-guides'
 " Plugin 'vim-scripts/gitignore'
+Plugin 'Valloric/YouCompleteMe'
 
 " Colours
 Plugin 'flazz/vim-colorschemes'
@@ -104,10 +105,12 @@ Plugin 'scrooloose/nerdcommenter'
 " Allow pane movement to jump out of vim into tmux
 Plugin 'christoomey/vim-tmux-navigator'
 
-" Plugin 'idris-hackers/idris-vim'
+Plugin 'idris-hackers/idris-vim'
 Plugin 'klen/python-mode'
 Plugin 'rust-lang/rust.vim'
-" Plugin 'lervag/vimtex'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'fatih/vim-go'
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 
