@@ -12,3 +12,6 @@ alias tmux='TERM=xterm-256color tmux'
 source /Users/kevinjohnson/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.cargo/env
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+source ~/.bash_profile
