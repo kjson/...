@@ -93,6 +93,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'mtth/scratch.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'chrisbra/csv.vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Text manipulation
 " Plugin 'vim-scripts/Align'
@@ -111,6 +112,9 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'fatih/vim-go'
 Plugin 'lervag/vimtex'
+
+" SQL
+" Plugin 'krisajenkins/vim-postgresql-syntax'
 
 call vundle#end()
 
@@ -181,8 +185,6 @@ nnoremap <leader>ma :set mouse=a<cr>
 " Turn mouse mode off
 nnoremap <leader>mo :set mouse=<cr>
 
-" Default to mouse mode on
-set mouse=a
 " }}}
 
 " Colors and Fonts {{{
@@ -336,7 +338,6 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
 noremap <c-h> <c-w>h
 noremap <c-k> <c-w>k
 noremap <c-j> <c-w>j
@@ -403,6 +404,7 @@ augroup END
 " Spell checking {{{
 
 " Pressing ,ss will toggle and untoggle spell checking
+" Cool!
 map <leader>ss :setlocal spell!<cr>
 
 "}}}
