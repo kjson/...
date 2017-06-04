@@ -15,3 +15,4 @@ source $HOME/.cargo/env
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 source ~/.bash_profile
+alias f=ranger
