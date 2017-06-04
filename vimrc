@@ -285,10 +285,9 @@ set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 2 spaces
-set shiftwidth=4
-set tabstop=2
+" 1 tab = 8 spaces
+set shiftwidth=8
+set tabstop=8
 
 " Linebreak on 500 characters
 set lbr
