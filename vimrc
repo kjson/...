@@ -38,19 +38,14 @@ set history=500
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 
 " Leader key timeout
 set tm=2000
 
-" Allow the normal use of "," by pressing it twice
-noremap ,, ,
-
 " Use par for prettier line formatting
-set formatprg="PARINIT='rTbgqR B=.,?_A_a Q=_s>|' par\ -w72"
+" set formatprg="PARINIT='rTbgqR B=.,?_A_a Q=_s>|' par\ -w72"
 
 " Kill the damned Ex mode.
 nnoremap Q <nop>
@@ -68,29 +63,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'ervandew/supertab'
-" Plugin 'moll/vim-bbye'
-" Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'vim-scripts/gitignore'
 Plugin 'Valloric/YouCompleteMe'
-
-" Colours
 Plugin 'flazz/vim-colorschemes'
 Plugin 'edkolev/tmuxline.vim'
-
-" Git
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'int3/vim-extradite'
 
 " Bars, panels, and files
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'majutsushi/tagbar'
-" Plugin 'mtth/scratch.vim'
+Plugin 'mtth/scratch.vim'
+
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'chrisbra/csv.vim'
 Plugin 'terryma/vim-multiple-cursors'
