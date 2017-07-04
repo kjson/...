@@ -92,6 +92,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'klen/python-mode'
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'fatih/vim-go'
 Plugin 'lervag/vimtex'
@@ -269,8 +270,8 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 " 1 tab = 8 spaces
-set shiftwidth=8
-set tabstop=8
+set shiftwidth=4
+set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
@@ -479,6 +480,12 @@ let g:pymode_options_max_line_length = 99
 let g:pymode_rope = 0
 
 " }}}
+
+" {{{ Rust stuff
+
+let g:rustfmt_autosave = 1
+
+" }}
 
 " Conversion {{{
 
