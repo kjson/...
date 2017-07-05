@@ -477,7 +477,15 @@ let g:haskell_tabular = 1
 " {{{ Python Integration
 
 let g:pymode_options_max_line_length = 99
-let g:pymode_rope = 0
+let g:pymode_rope = 1
+let g:pymode_paths = []
+let g:pymode_trim_whitespaces = 1
+let g:pymode_indent = 1
+" zM to fold all, zR to unfold all, zc to fold one, zo to unfold one
+let g:pymode_folding = 1
+let g:pymode_doc = 1
+" run python code with leader r
+let g:pymode_run = 1
 
 " }}}
 
