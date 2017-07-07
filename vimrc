@@ -98,7 +98,7 @@ Plugin 'fatih/vim-go'
 Plugin 'lervag/vimtex'
 
 " SQL
-" Plugin 'krisajenkins/vim-postgresql-syntax'
+Plugin 'krisajenkins/vim-postgresql-syntax'
 
 call vundle#end()
 
@@ -492,6 +492,12 @@ let g:pymode_run = 1
 " {{{ Rust stuff
 
 let g:rustfmt_autosave = 1
+let g:racer_cmd = "/Users/kevinjohnson/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " }}
 
