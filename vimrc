@@ -163,17 +163,12 @@ set vb t_vb=
 " Force redraw
 map <silent> <leader>r :redraw!<CR>
 
-" Turn mouse mode on
-nnoremap <leader>ma :set mouse=a<cr>
-
-" Turn mouse mode off
-nnoremap <leader>mo :set mouse=<cr>
-
 " }}}
 
 " Colors and Fonts {{{
 set  t_Co=256
-colorscheme 1989
+colorscheme jellybeans
+set encoding=utf-8
 
 " Enable syntax highlighting
 syntax enable
@@ -212,8 +207,9 @@ if has("gui_running")
 endif
 
 " Unfortunely can't get this to work on all my systems
-" let g:airline_powerline_fonts = 1
-let g:tmuxline_powerline_separators = 0
+let g:airline_powerline_fonts = 1
+let g:airline_theme='behelit'
+let g:tmuxline_powerline_separators = 1
 let g:tmuxline_preset = {
       \'a'    : '#S',
       \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
@@ -222,13 +218,6 @@ let g:tmuxline_preset = {
       \'x'    : '#(date)',
       \'y'    : ['%R', '%a', '%Y'],
       \'z'    : '#H'}
-
-" Not sure why this isn't working
-" let g:airline_theme='distinquished'
-let g:airline_theme='distinguished'
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
