@@ -6,6 +6,7 @@ alias tmux='TERM=xterm-256color tmux' # make tmux use 256 colors
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 bindkey -s "\C-r" "\eqhh\n"     # bind hh to Ctrl-r
 bindkey -s "\C-f" "\eqranger\n" # bind ranger to Ctrl-f
+bindkey -s "\C-t" "\eqtig\n"    # bind tig to Ctrl-t
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
