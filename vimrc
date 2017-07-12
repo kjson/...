@@ -359,6 +359,9 @@ nnoremap <leader>bn :bn<cr>
 " fuzzy find buffers
 noremap <leader>b<space> :CtrlPBuffer<cr>
 
+" control p ctags
+nnoremap <leader>. :CtrlPTag<cr>
+
 " }}}
 
 " Status line {{{
