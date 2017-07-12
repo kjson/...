@@ -51,7 +51,7 @@ set tm=2000
 nnoremap Q <nop>
 
 " Stop highlighting
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap NH :nohl<CR><C-l>
 
 " }}}
 
