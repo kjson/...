@@ -9,5 +9,5 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[white]%} deleted"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[white]%} renamed"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[white]%} unmerged"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%} untracked"
-PROMPT='%{$fg[white]%}%n%{$reset_color%}@%{$fg[white]%}%m%{$reset_color%}:%{$fg[white]%}%~%{$reset_color%} '
+PROMPT='%{$fg[white]%}%n%{$reset_color%}@%{$fg[white]%}%m%{$reset_color%}:%{$fg[white]%}%~%{$reset_color%}# '
 RPROMPT='${return_code}%{$fg[white]%}%D{%F %T}$(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
