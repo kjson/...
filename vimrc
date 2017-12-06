@@ -66,6 +66,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'wikitopian/hardmode'
 
 " Bars, panels, and files
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -73,6 +74,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mtth/scratch.vim'
+Plugin 'mattn/webapi-vim'
 
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'chrisbra/csv.vim'
@@ -85,6 +87,9 @@ Plugin 'tpope/vim-commentary'
 " Plugin 'godlygeek/tabular'
 "Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'w0rp/ale'
+" Plugin 'junegunn/fzf' something for text searching
+
 
 " Allow pane movement to jump out of vim into tmux
 Plugin 'christoomey/vim-tmux-navigator'
@@ -484,14 +489,24 @@ let g:pymode_run = 1
 " {{{ Rust stuff
 
 let g:rustfmt_autosave = 1
+
+set hidden
 let g:racer_cmd = "/Users/kevinjohnson/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
+
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
-" }}
+" }}}
+
+" {{{ C stuff
+
+
+map <F8> : !gcc % && ./a.out <CR>
+
+" }}}
 
 " Conversion {{{
 
@@ -506,4 +521,6 @@ endfunction
 vnoremap <silent> <leader>h> :call Pointful()<CR>
 
 " }}}
+
+
 
