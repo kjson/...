@@ -102,6 +102,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'fatih/vim-go'
 Plugin 'lervag/vimtex'
 
+Plugin 'rhysd/vim-clang-format'
+
 " SQL
 Plugin 'krisajenkins/vim-postgresql-syntax'
 
@@ -176,7 +178,7 @@ colorscheme jellybeans
 set encoding=utf-8
 
 " Enable syntax highlighting
-syntax enable
+syntax on
 
 " Adjust signscolumn and syntastic to match wombat
 hi! link SignColumn LineNr
@@ -226,6 +228,9 @@ let g:tmuxline_preset = {
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+
+
+
 
 " }}}
 
@@ -289,6 +294,14 @@ function! StripWhitespace()
     call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
+
+let g:idris_indent_if = 3
+let g:idris_indent_case = 5
+let g:idris_indent_let = 4
+let g:idris_indent_where = 6
+let g:idris_indent_do = 3
+let g:idris_indent_rewrite = 8
+let g:idris_conceal = 1
 
 " }}}
 
