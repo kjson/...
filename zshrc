@@ -13,3 +13,8 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.cargo/env
 export HISTFILE=$HOME/.zsh_history  # ensure history file visibility
 export HH_CONFIG=hicolor        # get more colors
+alias duu='du -d 1'
+alias dff='df -gHl'
+alias lss='ls -alST'
+alias ls+='exa -T'
+alias rm+='rm -frPdv'
