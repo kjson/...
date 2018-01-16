@@ -70,7 +70,6 @@ Plugin 'wikitopian/hardmode'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mtth/scratch.vim'
 Plugin 'mattn/webapi-vim'
 
@@ -181,6 +180,8 @@ set  t_Co=256
 colorscheme nord
 set encoding=utf-8
 
+" Nord TODO italics and dimmed text.
+
 " Enable syntax highlighting
 syntax on
 
@@ -219,7 +220,6 @@ endif
 
 " Unfortunely can't get this to work on all my systems
 let g:airline_powerline_fonts = 1
-let g:airline_theme='behelit'
 let g:tmuxline_powerline_separators = 1
 let g:tmuxline_preset = {
       \'a'    : '#S',
@@ -530,9 +530,6 @@ map <F8> : !gcc % && ./a.out <CR>
 
 " }}}
 
-
-
-
 " Conversion {{{
 
 function! Pointfree()
@@ -546,6 +543,3 @@ endfunction
 vnoremap <silent> <leader>h> :call Pointful()<CR>
 
 " }}}
-
-
-
