@@ -63,9 +63,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'wikitopian/hardmode'
 
 " Bars, panels, and files
@@ -106,6 +104,12 @@ Plugin 'rhysd/vim-clang-format'
 
 " SQL
 Plugin 'krisajenkins/vim-postgresql-syntax'
+
+" Colouring
+Plugin 'arcticicestudio/nord-vim'
+
+" Git
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
@@ -174,7 +178,7 @@ map <silent> <leader>r :redraw!<CR>
 
 " Colors and Fonts {{{
 set  t_Co=256
-colorscheme jellybeans
+colorscheme nord
 set encoding=utf-8
 
 " Enable syntax highlighting
@@ -520,6 +524,14 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 map <F8> : !gcc % && ./a.out <CR>
 
 " }}}
+
+" {{{ Go stuff
+
+
+" }}}
+
+
+
 
 " Conversion {{{
 
