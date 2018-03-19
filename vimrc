@@ -1,3 +1,5 @@
+" calcurse, ncdu, mutt
+
 " General {{{
 
 " use indentation for folds
@@ -13,13 +15,15 @@ set laststatus=2
 " show relative line number
 set rnu
 function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-    endfunc
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
 nnoremap <C-n> call NumberToggle()<cr>
+
 au FocusLost * set number
 au FocusGained * set relativenumber
 autocmd InsertEnter * set number
@@ -38,6 +42,7 @@ set history=500
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" This is substituted in any other command that's like leader-X
 let mapleader = " "
 let g:mapleader = " "
 
@@ -109,6 +114,9 @@ Plugin 'arcticicestudio/nord-vim'
 
 " Git
 Plugin 'airblade/vim-gitgutter'
+
+" Go
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 call vundle#end()
 
@@ -306,6 +314,14 @@ let g:idris_indent_where = 6
 let g:idris_indent_do = 3
 let g:idris_indent_rewrite = 8
 let g:idris_conceal = 1
+
+
+" Wildmode
+set wildmenu
+set wildmode=longest:full
+set wildignore+=*.a,*.o,*.hi
+set wildignore+=*.pdf,*.gz,*.aux,*.out,*.nav,*.snm,*.vrb
+
 
 " }}}
 
