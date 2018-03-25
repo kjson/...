@@ -9,6 +9,7 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 bindkey -s "\C-s" "\eqhh\n"     # bind hh to Ctrl-r
 bindkey -s "\C-f" "\eqranger\n" # bind ranger to Ctrl-f
 bindkey -s "\C-t" "\eqtig\n"    # bind tig to Ctrl-t
+bindkey -s "\C-h" "\eqhtop\n"    # bind htop to ctrl-h
 bindkey -v
 
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
