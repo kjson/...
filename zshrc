@@ -23,5 +23,6 @@ alias dff='df -gHl'
 alias lss='ls -alST'
 alias ls+='exa -T'
 alias rm+='rm -frPdv'
+alias psql='pgcli'
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

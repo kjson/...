@@ -1,1 +1,3 @@
 ln -s -f -v $(pwd)/psqlrc ~/.psqlrc
+ln -s -f -v $(pwd)/pgclirc ~/.config/pgcli/config
+
