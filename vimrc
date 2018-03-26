@@ -60,65 +60,67 @@ nnoremap NH :nohl<CR><C-l>
 
 " }}}
 
-" Vundle {{{
+" Plugins {{{
 
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'wikitopian/hardmode'
+call plug#begin('~/.vim/plugged')
+
+Plug 'gmarik/Vundle.vim'
 
 " Bars, panels, and files
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'mtth/scratch.vim'
-Plugin 'mattn/webapi-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'chrisbra/csv.vim'
-Plugin 'terryma/vim-multiple-cursors'
+" Colouring
+Plug 'arcticicestudio/nord-vim'
 
 " Text manipulation
 " Plugin 'vim-scripts/Align'
 " Plugin 'vim-scripts/Gundo'
-Plugin 'tpope/vim-commentary'
+Plug 'wikitopian/hardmode'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plugin 'tpope/vim-commentary'
 " Plugin 'godlygeek/tabular'
 "Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'w0rp/ale'
+" Plugin 'scrooloose/nerdcommenter'
+" Plugin 'w0rp/ale'
 " Plugin 'junegunn/fzf' something for text searching
 
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
-" Allow pane movement to jump out of vim into tmux
-Plugin 'christoomey/vim-tmux-navigator'
+" Idris
+Plug 'idris-hackers/idris-vim'
 
-Plugin 'idris-hackers/idris-vim'
-Plugin 'klen/python-mode'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'fatih/vim-go'
-Plugin 'lervag/vimtex'
+" C++
+Plug 'rhysd/vim-clang-format'
 
-Plugin 'rhysd/vim-clang-format'
+" CSV
+Plug 'chrisbra/csv.vim'
 
 " SQL
-Plugin 'krisajenkins/vim-postgresql-syntax'
+Plug 'krisajenkins/vim-postgresql-syntax'
 
-" Colouring
-Plugin 'arcticicestudio/nord-vim'
+" Python
+Plug 'klen/python-mode'
 
-" Git
-Plugin 'airblade/vim-gitgutter'
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'sebastianmarkow/deoplete-rust'
 
 " Go
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plug 'nsf/gocode', {'rtp': 'vim/'}
+Plug 'fatih/vim-go'
 
-call vundle#end()
+call plug#end()
 
 " }}}
 
@@ -314,6 +316,9 @@ let g:idris_indent_where = 6
 let g:idris_indent_do = 3
 let g:idris_indent_rewrite = 8
 let g:idris_conceal = 1
+
+" startup deoplete right away
+let g:deoplete#enable_at_startup = 1
 
 
 " Wildmode
@@ -524,13 +529,14 @@ let g:pymode_run = 1
 let g:rustfmt_autosave = 1
 
 set hidden
-let g:racer_cmd = "/Users/kevinjohnson/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
+let g:deoplete#sources#rust#racer_binary='/Users/kevinjohnson/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/Users/kevinjohnson/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
+
+nmap <buffer> gd <plug>DeopleteRustGoToDefinitionDefault
+nmap <buffer> K  <plug>DeopleteRustShowDocumentation
+
 
 " }}}
 

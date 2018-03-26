@@ -4,12 +4,13 @@ COMPLETION_WAITING_DOTS="true"
 Plugins=(git command-not-found zsh-autosuggestions zsh-syntax-highlighting)
 
 alias tmux='TERM=xterm-256color tmux' # make tmux use 256 colors
+alias vim='nvim'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 bindkey -s "\C-s" "\eqhh\n"     # bind hh to Ctrl-r
 bindkey -s "\C-f" "\eqranger\n" # bind ranger to Ctrl-f
 bindkey -s "\C-t" "\eqtig\n"    # bind tig to Ctrl-t
-bindkey -s "\C-h" "\eqhtop\n"    # bind htop to ctrl-h
+bindkey -s "\C-h" "\eqhtop\n"   # bind htop to ctrl-h
 bindkey -v
 
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
