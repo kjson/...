@@ -109,7 +109,7 @@ Plug 'chrisbra/csv.vim'
 Plug 'krisajenkins/vim-postgresql-syntax'
 
 " Python
-Plug 'klen/python-mode'
+Plug 'davidhalter/jedi-vim'
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -119,6 +119,7 @@ Plug 'sebastianmarkow/deoplete-rust'
 " Go
 Plug 'nsf/gocode', {'rtp': 'vim/'}
 Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 
